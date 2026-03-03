@@ -345,14 +345,14 @@ with tabs[1]:
 
         c1, c2 = st.columns(2)
         with c1:
-            org = st.text_input("Organization", value="Prairie States ACO", key="a1")
+            org = st.text_input("Organization", value="Heartland ACO Partners", key="a1")
             otype = st.selectbox("Type", ["ACO","MSO","Health System","Practice Group","Health Plan","IPA"], index=0, key="a2")
             vbc = st.selectbox("VBC Maturity", ["Pre-VBC (FFS dominant)","Early VBC (<20%)","Scaling VBC (20-50%)","Mature VBC (>50%)"], index=2, key="a3")
         with c2:
             payer = st.selectbox("Payer Mix", ["MA heavy (>40%)","Commercial dominant","Medicaid heavy","Balanced"], index=0, key="a4")
             size = st.select_slider("Providers", options=["<25","25-50","50-100","100-250","250-500","500+"], value="100-250", key="a5")
-            stage = st.selectbox("Stage", ["Pre-sale","Implementation","Early adoption","Established","Renewal"], index=2, key="a6")
-        pain = st.text_area("Pain Points", value="RAF scores declining 3 quarters in a row despite training efforts. Providers completing HCC coding at 58% — well below the 80% threshold needed to hit shared savings targets. MA Star rating dropped from 4.0 to 3.5 this year. Quality gap closure sitting at 39%. CMO is asking hard questions about platform ROI ahead of Q3 contract renewal.", key="a7", height=80)
+            stage = st.selectbox("Stage", ["Pre-sale","Implementation","Early adoption","Established","Renewal"], index=3, key="a6")
+        pain = st.text_area("Pain Points", value="HCC coding completion at 64% against an 80% target — on par with national average but below shared savings threshold. MA Star rating holding at 3.5 (national median), missing the 4.0 cutoff for full bonus payments. HEDIS gap closure at 51%. RAF score variance running 18% against attributed population benchmarks. Platform login rate plateaued at 42% at month 10. 3 of 7 high-value quality measures below minimum performance levels for upcoming CMS reporting window. CFO questioning ROI ahead of annual contract review.", key="a7", height=100)
 
         if st.button("⚡ Generate Account Intelligence", type="primary", use_container_width=True, key="a8"):
             with st.spinner("Analyzing account..."):
